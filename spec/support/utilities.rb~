@@ -20,3 +20,12 @@ RSpec::Matchers.define :have_error_message do |message|
   end
 end
 
+RSpec::Matchers.define :signed_in_as do|message|
+  match do  |page|
+    expect(page).to have_link('Sign out')
+    #expect(page).to have_link('Profile')   
+  end
+end
+
+
+
