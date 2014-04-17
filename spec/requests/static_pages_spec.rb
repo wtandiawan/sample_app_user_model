@@ -32,13 +32,11 @@ describe "Static pages" do
         end
       end
  
-      describe "pagination and micropost count" do
+      describe "pagination test" do
 
         before(:all) { 5.times { FactoryGirl.create(:micropost, user: user) } }
 
-
-     end #end paginations
-
+     end 
 
    end
 
