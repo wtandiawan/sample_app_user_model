@@ -1,12 +1,14 @@
-<% if @user.errors.any? %>
-  <div id="error_explanation">
-    <div class="alert alert-error">
-      The form contains <%= pluralize(@user.errors.count, "error") %>.
-    </div>
-    <ul>
-    <% @user.errors.full_messages.each do |msg| %>
-      <li>* <%= msg %></li>
+<% provide(:title, 'Sign up') %>
+<h1>Sign up</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+
+	<%= render 'fields', f: f %>
+        <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
     <% end %>
-    </ul>
   </div>
-<% end %>
+</div>
