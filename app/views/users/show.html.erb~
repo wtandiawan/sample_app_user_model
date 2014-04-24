@@ -1,9 +1,9 @@
 <% provide(:title, @user.name) %>
 <div class="row">
   <aside class="span4">
-   <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
+   <section>
+	<h1>
+        <%= render 'shared/gravatars' %>
       </h1>
    <section>
 	<%= render 'shared/stats' %>

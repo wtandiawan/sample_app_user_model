@@ -3,8 +3,7 @@
   <aside class="span4">
    <section>
 	<h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
+        <%= render 'shared/gravatars' %>
       </h1>
    <section>
 	<%= render 'shared/stats' %>
